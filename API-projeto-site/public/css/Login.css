@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url('../img/silver_blur_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+/* FUNDO */
+
+
+/* BARRA DE NAVEGAÇÂO */
+
+.header {
+    padding-top: 3px;
+    background: hsl(20, 14%, 4%, 0.8);
+    width: 100%;
+    height: 73px;
+    border-bottom: 5px solid #1190cb;
+    padding-bottom: 5px;
+    position: fixed;
+}
+
+.fundo {
+    padding-top: 20px;
+    background: #353434;
+    width: 100%;
+    height: 1300px;
+}
+
+.caixa {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header span {
+    margin-top: -5px;
+    /* Dúvida: Como eu faço para essa parte ficar alinhada 
+  com a list sem ser chutando valores no margin-top?
+  RESPOSTA: coloque uma div entre os 2 */
+    float: left;
+}
+
+.header nav {
+    margin-top: -3px;
+    float: right;
+}
+
+ul {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.list_not {
+    font-style: inherit;
+    display: inline;
+    margin-left: 22px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.list_not:hover {
+    color: #1190cb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* LOGIN */
+
+.pag_login {
+    text-align: center;
+    padding: 10% 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.caixa_fundo {
+    margin: 2% auto;
+    background-color: #fdffff;
+    border: 1px solid #fdffff;
+    height: 350px;
+    width: 400px;
+    transition-duration: 00.4s;
+    box-shadow: -0 0 0.5em rgb(200, 200, 200);
+}
+
+.caixa {
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.caixa input {
+    width: 300px;
+    height: 30px;
+    margin-top: 4%;
+    background-color: #fdffff;
+    border: #fdffff;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.div_aviso {
+    margin-top: 2%;
+    height: 10px;
+    background-color: transparent;
+}
+
+.txt_aviso {
+    color: rgb(236, 0, 0);
+    text-align: center;
+    font-size: small;
+    font-weight: bolder;
+}
+
+.btn_entrar {
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+    background-color: #0886c0;
+    color: white;
+    border: 0px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn_entrar:hover {
+    background-color: #82bbd1;
+}
+
+.cadastre {
+    font-size: small;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cadastre u:hover {
+    background-color: azure;
+    color: #1190cb;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #303030;
+    height: 100px;
+}
+
+.rodape {
+    background-color: #303030;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-top: 2%;
+}
+
+.box_rodape {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo_bandtec {
+    height: 80px;
+    float: left;
+}
+
+.copyright {
+    text-align: center;
+    float: left;
+    width: 300px;
+    height: 50px;
+    margin-left: 25%;
+    margin-top: 35px;
+}
+
+.logo_termosense {
+    height: 80px;
+    float: right;
+}

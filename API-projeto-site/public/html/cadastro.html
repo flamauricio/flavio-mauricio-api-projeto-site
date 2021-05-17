@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="icon" href="../img/Logo_simbolo.png">
+    <script src="../js/script_cadastro.js"></script>
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Header-->
+        <div class="caixa">
+            <span><a href="HomePage.html"><img style="height: 60px;" src="../img/TermoSenseLogo.png"
+                        alt="Logo Termo Sense"></a></span>
+            <nav>
+                <ul>
+                    <li class="list_not"><a href="HomePage.html">Home</a></li>
+                    <li class="list_not"><a href="Sobre.html">Sobre</a></li>
+                    <li class="list_not"><a href="Simulador.html">Simulador</a></li>
+                    <li class="list_not"><a href="Contato.html">Contato</a></li>
+                    <li class="list_not"><a href="Login.html">Área do cliente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="pag_cadastro">
+        <div class="cadastro">
+            <div class="box_cadastro">
+                <h2>Faça seu cadastro aqui!</h2>
+                <div class="box_input">
+                    <form id="form_cadastro" onsubmit="return cadastrar()">
+                        <!-- Div para organizar os inputs na esquerda -->
+                        <div class="input_esq">
+                            <span>Nome da empresa:<input type="text" name="inp_nome" placeholder=""></span>
+
+                            <span>E-mail:<input type="text" name="inp_email" placeholder=""></span>
+
+                            <span>Estado:<select name="inp_estado">
+                                    <option value="" disabled selected></option>
+                                    <option value="AC" >AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select></span>
+
+                            <span>Endereço:<input type="text" name="inp_endereco" placeholder=""></span>
+                        </div>
+
+                        <!-- Div para organizar os inputs na direita -->
+                        <div class="input_dir">
+                            <span>CNPJ:<input type="text" name="inp_cnpj" placeholder="(apenas números)"></span>
+
+                            <span>Telefone:<input type="text" name="inp_telefone" placeholder="(apenas números)"></span>
+
+                            <span>Cidade:<input type="text" name="inp_cidade" placeholder=""></span>
+
+                            <span>Senha:<input type="password" name="inp_senha"></span>
+                        </div>
+
+                </div>
+
+                <div id="aviso" class="div_aviso">
+                    <!-- onde irá aparecer os avisos -->
+                    <span id="div_erro" class="txt_aviso"></span><br>
+                </div>
+                <button onclick="cadastrar()" id="btn_entrar" class="btn_cadastro">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function(response) {
+
+            if (response.ok) {
+
+                window.location.href = 'Login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function(resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        div_erro.style.display = 'block';
+    }
+</script>

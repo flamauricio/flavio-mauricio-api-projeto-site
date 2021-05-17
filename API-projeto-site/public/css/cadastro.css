@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url('../img/silver_blur_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* HEADER */
+
+.header {
+    padding-top: 9px;
+    background: hsl(20, 14%, 4%, 0.8);
+    width: 100%;
+    height: 73px;
+    border-bottom: 5px solid #1190cb;
+    position: fixed;
+}
+
+.fundo {
+    padding-top: 20px;
+    background: #353434;
+    width: 100%;
+    height: 1300px;
+}
+
+.caixa {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header span {
+    margin-top: 2px;
+    float: left;
+}
+
+.header nav {
+    margin-top: 5px;
+    float: right;
+}
+
+ul {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.list_not {
+    font-style: inherit;
+    display: inline;
+    margin-left: 22px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.list_not:hover {
+    color: #1190cb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Cadastro */
+
+.pag_cadastro {
+    height: 100%;
+    padding: 5%;
+}
+
+.cadastro {
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    box-shadow: -0 0 0.5em rgb(134, 134, 134);
+    border: 1px solid #fdffff;
+}
+
+.box_cadastro {
+    max-width: 90%;
+    padding: 5%;
+}
+
+.box_input {
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+    text-align: left;
+}
+
+.input_esq {
+    width: 200px;
+    float: left;
+}
+
+.input_dir {
+    width: 200px;
+    float: right;
+}
+
+.box_input span {
+    margin-top: 25px;
+    float: left;
+}
+
+.box_input input {
+    width: 100%;
+    height: 25px;
+    border: white;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.box_input input::placeholder {
+    color: rgb(78, 78, 78);
+    text-align: left;
+    font-size: 12px;
+}
+
+.box_input select {
+    width: 200px;
+    height: 25px;
+    border: white;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.div_aviso {
+    margin-top: 2%;
+    height: 35px;
+    background-color: transparent;
+}
+
+.txt_aviso {
+    color: rgb(236, 0, 0);
+    text-align: center;
+    font-size: small;
+    font-weight: bolder;
+}
+
+.btn_cadastro {
+    margin-top: 3%;
+    width: 50%;
+    height: 45px;
+    background-color: #0886c0;
+    color: white;
+    border: #0886c0;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.btn_cadastro:hover {
+    background-color: #a2c6d4;
+}

@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-size: cover;
+    background-color: #E5E5E5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* HEADER */
+
+.header {
+    padding-top: 9px;
+    background: hsl(20, 14%, 4%, 0.8);
+    width: 100%;
+    height: 73px;
+    border-bottom: 5px solid #1190cb;
+    
+}
+
+.fundo {
+    padding-top: 20px;
+    background: #353434;
+    width: 100%;
+    height: 1300px;
+}
+
+.caixa {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header span {
+    margin-top: 2px;
+    float: left;
+}
+
+.header nav {
+    margin-top: 5px;
+    float: right;
+}
+
+ul {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.list_not {
+    font-style: inherit;
+    display: inline;
+    margin-left: 22px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.list_not:hover {
+    color: #1190cb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* fIM DO HEADER */
+
+.pag_inicio {
+    height: 660px;
+    padding-top: 60px;
+}
+
+.conteiner {
+    margin: auto;
+    height: 300px;
+    width: 800px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 25px -1px rgba(0, 0, 0, 0.25);
+}
+
+.box_inicio {
+    margin: 5px auto;
+    padding-top: 5px;
+    height: 400px;
+    max-width: 95%;
+}
+
+.box_inicio h1 {
+    margin-top: 55px;
+}
+
+.box_inicio h3 {
+    margin-top: 40px;
+}
+
+.box_inicio h4 {
+    margin-top: 100px;
+}
+
+.box_select {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.div_select_1 {
+    float: left;
+}
+
+.div_select_2 {
+    float: right;
+}
+
+
+/* FOOTER */
+
+.rodape {
+    background-color: #303030;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-top: 2%;
+}
+
+.box_rodape {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo_bandtec {
+    height: 80px;
+    float: left;
+}
+
+.copyright {
+    text-align: center;
+    float: left;
+    width: 300px;
+    height: 50px;
+    margin-left: 25%;
+    margin-top: 35px;
+}
+
+.logo_termosense {
+    height: 80px;
+    float: right;
+}
+
+.img {
+    width: 400px;
+    margin-left: 300px;
+    margin-top: 280px;
+}
+
+.texto_meio {
+    background-size: cover;
+    color: black;
+    padding-top: -100px;
+    text-align: justify;
+    padding-right: 60px;
+    margin-top: 80px;
+    margin-left: 600px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.botao_contato {
+    color: #fdffff;
+    background-color: #1190cb;
+    border: 0;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input_padrao {
+    width: 300px;
+    height: 25px;
+}

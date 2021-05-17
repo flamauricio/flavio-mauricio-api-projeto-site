@@ -1,0 +1,217 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #E5E5E5;
+}
+
+.header {
+    padding-top: 10px;
+    background: hsl(20, 14%, 4%, 0.8);
+    width: 100%;
+    height: 73px;
+    border-bottom: 5px solid #1190cb;
+}
+
+.caixa {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.list_not {
+    font-style: inherit;
+    display: inline;
+    margin-left: 22px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.list_not:hover {
+    color: #1190cb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header span {
+    margin-top: 2px;
+    float: left;
+}
+
+.header nav {
+    margin-top: -1px;
+    float: right;
+}
+
+.titulo_sobrepag {
+    font-size: large;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sobrepag {
+    width: 52%;
+    height: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-right: 35px;
+    margin-left: 15px;
+    padding-top: 20px;
+    text-align: justify;
+    float: right;
+    padding-bottom: 100px;
+    font-size: medium;
+}
+
+.sobrepag_alt {
+    margin-top: 60px;
+    font-size: medium;
+    float: left;
+    padding-right: 35px;
+    text-align: justify;
+    margin-left: 30px;
+}
+
+.botao_sobrepag {
+    color: #fdffff;
+    background-color: #1190cb;
+    border: 0;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.titulo {
+    text-align: right;
+    font-size: x-large;
+}
+
+.img {
+    width: 40%;
+    height: 400%;
+    float: left;
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-right: 10px;
+    box-shadow: 3px 3px 5px 5px #557e7e;
+}
+
+.transporte_armazen {
+    margin-top: 500px;
+    background-color: #6495ED;
+    height: 100%;
+    width: 100%;
+}
+
+.linha_divisoria {
+    margin-top: 710px;
+    height: 15px;
+    width: 100%;
+    border-top: 5px solid #1190cb;
+    border-bottom: 5px solid #1190cb;
+    background-color: hsl(20, 14%, 4%, 0.8);
+}
+
+
+/*Parte do sensor*/
+
+.container {
+    max-width: 80%;
+    height: 100%;
+    margin-left: 100px;
+}
+
+.box {
+    height: 280px;
+    margin: 0 auto;
+    max-width: 1126px;
+}
+
+.box .item {
+    float: left;
+    text-align: left;
+    width: 300px;
+    margin: 14px auto;
+    padding-left: 10px;
+}
+
+.box .item img {
+    width: 310px;
+}
+
+.box-login {
+    display: inline-block;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 3px 3px 5px 2px #6495ED;
+    margin-left: 100px;
+    margin-top: 45px;
+    border-radius: 50px;
+    width: 800px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item {
+    font-size: small;
+}
+
+.item2 {
+    font-size: small;
+    padding-right: 10px;
+    float: right;
+}
+
+.centro {
+    text-align: center;
+}
+
+.imgdht11 {
+    padding-left: 10px;
+}
+
+.DHT11 {
+    float: right;
+}
+
+.rodape {
+    background-color: #303030;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-top: 2%;
+    margin-top: 25%;
+}
+
+.box_rodape {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo_bandtec {
+    height: 80px;
+    float: left;
+}
+
+.copyright {
+    text-align: center;
+    float: left;
+    width: 20%;
+    height: 50px;
+    margin-left: 25%;
+    margin-top: 35px;
+}
+
+.logo_termosense {
+    height: 80px;
+    float: right;
+}

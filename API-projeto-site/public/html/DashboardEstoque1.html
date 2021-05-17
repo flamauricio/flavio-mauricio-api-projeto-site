@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" href="../img/Logo_simbolo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+        integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+        crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Header-->
+        <div class="caixa">
+            <span><a href="HomePage.html"><img style="height: 60px;" src="../img/TermoSenseLogo.png"
+                        alt="Logo Termo Sense"></a></span>
+            <nav>
+                <ul>
+                    <li class="list_not"><a href="AreaDoCliente.html">Inicio</a></li>
+                    <li class="list_not"><a href="Login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="pag_dashboard">
+        <div class="container">
+            <div class="box_dasboard">
+
+                <!-- Botões -->
+                <div class="div_btn">
+                    <button class="btn_azul" onclick="temperatura()">Temperatura</button>
+                    <button class="btn_azul" onclick="umidade()">Umidade</button>
+                </div>
+
+                <!--Grafico Principal -->
+                <div class="box_chartPrincipal">
+                    <div class="chartPrincipal">
+                        <canvas id="chartTemp" width="700" height="300" style="display: block;"></canvas>
+                        <canvas id="chartUmi" width="700" height="300" style="display: none;"></canvas>
+                    </div>
+                </div>
+
+                <div class="container_2Boxes">
+                    <!-- Grafico Pizza -->
+                    <div class="box_chartPizza">
+                        <div class="chartPizza">
+                            <h4></h4>
+                            <canvas id="chartPieTemp" width="300" height="300" style="display: block;"></canvas>
+                            <canvas id="chartPieUmi" width="300" height="300" style="display: none;"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Media -->
+                    <div class="box_media">
+                        <div class="media">
+                            <div class="media_temp" id="msg_mediaTemp" style="display: block;">
+                                <h4>Temperatura Média do dia</h4>
+                                <span id="media_temp">4°</span>
+                            </div>
+                            <div class="media_umi" id="msg_mediaUmi" style="display: none;">
+                                <h4>Umidade Média do dia</h4>
+                                <span id="media_umi">52%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="box_rodape">
+            <img class="logo_bandtec" src="../img/bandtec.png" alt="logo da bandtec">
+            <div class="copyright">
+                <span>Termo Sense - Copyright © 2021</span>
+            </div>
+            <img class="logo_termosense" src="../img/TermoSenseLogo.png" alt="logo Termo Sense">
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function temperatura() {
+        chartTemp.style.display = 'block';
+        chartUmi.style.display = 'none';
+
+        msg_mediaTemp.style.display = 'block';
+        msg_mediaUmi.style.display = 'none';
+
+        chartPieTemp.style.display = 'block';
+        chartPieUmi.style.display = 'none';
+
+
+    }
+
+    function umidade() {
+        chartTemp.style.display = 'none';
+        chartUmi.style.display = 'block';
+
+        msg_mediaTemp.style.display = 'none';
+        msg_mediaUmi.style.display = 'block';
+
+        chartPieTemp.style.display = 'none';
+        chartPieUmi.style.display = 'block';
+    }
+
+    /* Gráfico em linha de TEMPERATURA */
+    var ctx1 = chartTemp.getContext('2d');
+    var myChart = new Chart(ctx1, {
+        type: 'line',
+        /* tipo de gráfico */
+        data: {
+            labels: ['14:55', '14:56', '14:57', '14:58', '14:59', '15:00', '15:01'],
+            datasets: [{
+                label: 'Temperatura a cada minuto',
+                data: [4, 4.5, 5.0, 4.8, 4.7, 5.9, 7.1],
+                /* Valores / dados*/
+                backgroundColor: [
+                    'rgb(0, 94, 202)',
+
+                ],
+                borderColor: [
+                    'rgb(0, 138, 202)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    /* Gráfico em linha de UMIDADE */
+    var ctx2 = chartUmi.getContext('2d');
+    var myChart = new Chart(ctx2, {
+        type: 'line',
+        /* tipo de gráfico */
+        data: {
+            labels: ['14:55', '14:56', '14:57', '14:58', '14:59', '15:00', '15:01'],
+            datasets: [{
+                label: 'Umidade a cada minuto',
+                data: [40, 42, 40, 41, 43, 47, 52],
+                /* Valores / dados*/
+                backgroundColor: [
+                    'rgb(0, 94, 202)',
+
+
+                ],
+                borderColor: [
+                    'rgb(0, 138, 202)',
+                ],
+                borderWidth: 1
+            }]
+        },
+
+    });
+
+    /* Gráfico em pizza de TEMPERATURA */
+    var ctx3 = chartPieTemp.getContext('2d');
+    var myChart = new Chart(ctx3, {
+        type: 'pie',
+        /* tipo de gráfico */
+        data: {
+            labels: ['Ideal: (entre 40% e 60%)', 'Alerta: ( entre 70% e 80% e  entre 40% e 30%)',
+                'Perigo: (menor que 30% e maior que 80%)',
+            ],
+            datasets: [{
+                label: '',
+                data: [40, 10, 3],
+                /* Valores / dados*/
+                backgroundColor: [
+                    'green',
+                    'yellow',
+                    'red',
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Chart.js Pie Chart'
+            },
+        }
+    });
+
+    /* Gráfico em pizza de UMIDADE */
+    var ctx4 = chartPieUmi.getContext('2d');
+    var myChart = new Chart(ctx4, {
+        type: 'pie',
+        /* tipo de gráfico */
+        data: {
+            labels: ['Ideal: (entre 40% e 60%)', 'Alerta: ( entre 70% e 80% e  entre 40% e 30%)',
+                'Perigo: (menor que 30% e maior que 80%)',
+            ],
+            datasets: [{
+                label: '',
+                data: [48, 7, 3],
+                /* Valores / dados*/
+                backgroundColor: [
+                    'green',
+                    'yellow',
+                    'red',
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Chart.js Pie Chart'
+            },
+        }
+    });
+</script>

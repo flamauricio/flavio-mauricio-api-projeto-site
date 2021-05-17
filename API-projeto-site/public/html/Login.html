@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Login.css" />
+    <link rel="icon" href="../img/Logo_simbolo.png">
+    <script src="../js/script_login.js"></script>
+    <title>Faça seu login</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Header-->
+        <div class="caixa">
+            <span><a href="HomePage.html"><img style="height: 60px;" src="../img/TermoSenseLogo.png" alt="Logo Termo Sense"></a></span>
+            <nav>
+                <ul>
+                    <li class="list_not"><a href="HomePage.html">Home</a></li>
+                    <li class="list_not"><a href="sobrepage.html">Sobre</a></li>
+                    <li class="list_not"><a href="Simulador.html">Simulador</a></li>
+                    <li class="list_not"><a href="contato.html">Contato</a></li>
+                    <li class="list_not" style="color: #1190cb;"><a href="Login.html">Área do cliente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="pag_login">
+        <div class="div_fundo">
+            <!-- colocar a parte do Login aqui para deixar centralizado -->
+            <div class="caixa_fundo">
+                <form id="form_login" method="POST" onsubmit="return entrar()">
+                    <div class="caixa">
+                        <h2>ENTRAR</h2>
+                        <input type="text" name="inp_email" placeholder="Email"><br>
+                        <input type="password" name="inp_senha" placeholder="Senha">
+                        <br>
+                        <div id="aviso" class="div_aviso">
+                            <!-- onde irá aparecer o aviso de (senha ou login errado) -->
+                            <span id="div_erro" class="txt_aviso"></span><br>
+                        </div>
+                        <button onclick="entrar()" class="btn_entrar">Avançar</button>
+                        <br><br>
+                        <div class="cadastre">Não tem uma conta? <a href="cadastro.html"><u>Cadastre-se!</u></a></div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="rodape">
+        <div class="box_rodape">
+            <img class="logo_bandtec" src="../img/bandtec.png" alt="logo da bandtec">
+            <div class="copyright">
+                <span>Termo Sense - Copyright © 2021</span>
+            </div>
+            <img class="logo_termosense" src="../img/TermoSenseLogo.png" alt="logo Termo Sense">
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'AreaDoCliente.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                id_email.classList.add('error');
+                id_senha.classList.add('error');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+</script>

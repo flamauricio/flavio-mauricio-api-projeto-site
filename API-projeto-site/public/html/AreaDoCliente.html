@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/areadocliente.css">
+    <link rel="icon" href="../img/Logo_simbolo.png">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Header-->
+        <div class="caixa">
+            <span><a href="HomePage.html"><img style="height: 60px;" src="../img/TermoSenseLogo.png" alt="Logo Termo Sense"></a></span>
+            <nav>
+                <ul>
+                    <li class="list_not"><a style="color: #1190cb;">Inicio</a></li>
+                    <li class="list_not"><a href="Login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="pag_inicio">
+        <div class="conteiner">
+            <div class="box_inicio">
+                <h1>Bem vindo á <span style="color:#1190cb ;"> Termo Sense </span></h1>
+                <h3>Verifique seus sensores abaixo:</h3><br><br>
+
+                <div class="box_select">
+                    <div class="div_select_1"> Transportes:
+                        <select onchange="select1()" id="transporte" class="slct_1">
+                      <option value="">Selecione aqui</option>
+                      <option value="opt_trans_1">Caminhão 1</option>
+                    </select>
+                    </div>
+
+                    <div class="div_select_2"> Estoques:
+                        <select onchange="select2()" id="estoque" class="slct_2">
+                      <option value="">Selecione aqui</option>
+                      <option value="opt_estq_1">Geladeira 1</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="box_rodape">
+            <img class="logo_bandtec" src="../img/bandtec.png" alt="logo da bandtec">
+            <div class="copyright">
+                <span>Termo Sense - Copyright © 2021</span>
+            </div>
+            <img class="logo_termosense" src="../img/TermoSenseLogo.png" alt="logo Termo Sense">
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function select1() {
+        if (transporte.value == 'opt_trans_1') {
+            window.location.href = "DasboardTransporte1.html";
+            setTimeout("select1()", 2500)
+        }
+    }
+
+    function select2() {
+        if (estoque.value == 'opt_estq_1') {
+            window.location.href = "DashboardEstoque1.html";
+            setTimeout("select2()", 2500)
+
+        }
+    }
+</script>

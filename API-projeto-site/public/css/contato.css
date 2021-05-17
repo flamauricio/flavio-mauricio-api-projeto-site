@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color:  #E5E5E5;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  .header {
+    padding-top: 9px;
+    background: hsl(20, 14%, 4%,0.8);
+    width: 100%;
+    height: 73px;
+    border-bottom: 5px solid  #1190cb;
+    position: fixed;
+  }
+  
+
+  .fundo {
+    padding-top: 20px;
+    background: #353434;
+    width: 100%;
+    height: 1300px;
+  }
+  .caixa {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto; 
+  }
+  .list_not {
+    font-style: inherit;
+    display: inline;
+    margin-left: 22px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+  }
+  .header nav{
+
+    float: right;
+    
+  }
+  .list_not:hover {
+    color: #1190cb;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+       .conteudo_cont{
+        color: rgb(17, 16, 16);
+
+        width: 80%;
+        height: 360px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: 100px;
+        margin-left: 120px;
+        margin-right: 65px;
+        padding-left: 30px;
+        padding-bottom: 60px;
+        padding-right:25px ;
+        padding-top: 1px;
+        text-align: justify;
+      } 
+
+.texto_sobrepag{ 
+background-image: url(../img/8cff9bf6691599234990_standard_desktop_fullhd.jpeg);
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 315px;
+padding-top: 12px;
+height: 20px;
+width: 100%;
+}
+
+
+.meio{
+  background: #303030;
+  width: 100%;
+   height: 40px;
+   margin-top: -230px;
+   border-top: 5px solid #1190cb;
+   border-bottom: 5px solid #1190cb;
+   padding-bottom: 30px;
+   
+}
+   
+   .escrita_meio{
+   color:#E5E5E5;
+   text-align: center;
+   font-size: small;
+   }
+
+   .formulario_cont {
+    color: rgb(17, 16, 16);
+    width: 80%;
+    height: 360px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+    margin-right: 65px;
+    padding-left: 50px;
+    padding-bottom: 130px;
+    padding-right:35px ;
+    padding-top: 1px;
+   }
+
+
+.rodape {
+    background-color: #303030;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-top: 2%;
+    margin-top: 200px;
+  
+  }
+  
+  .box_rodape{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .logo_bandtec{
+    height: 80px;
+    float: left;
+  }
+  .copyright{
+    text-align: center;
+    float: left;
+    width: 300px;
+    height: 50px;
+    margin-left: 25%;
+    margin-top: 35px;
+  
+  }
+  .logo_termosense{
+    height: 80px;
+    float: right;
+  }
+  
+  .img {
+  width: 400px;
+  margin-left: 300px;
+  margin-top: 280px;
+  
+  }
+
+.texto_meio{
+background-size: cover;
+color: black;
+padding-top: -100px;
+text-align: justify;
+padding-right: 60px;
+margin-top: 80px;
+margin-left: 600px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.img_phone {
+  width: 200px;
+  float: right;
+ margin-top: -60px;
+ margin-right: 300px;
+ 
+
+}
+.botao_contato {
+  color: #fdffff;
+  background-color: #1190cb;
+  border: 0;
+  padding: 10px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .frase_bem {
+    color: white;
+    font-size: 30px;
+    opacity: 90%;
+    background: #0c0a09;
+    width: 80%;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 95px;
+    margin-top: 40px;
+
+} */
+
+.input_padrao{
+
+    width: 300px;
+    height: 25px;
+}
