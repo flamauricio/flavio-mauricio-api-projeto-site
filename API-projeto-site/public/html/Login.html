@@ -42,7 +42,7 @@
                             <!-- onde irá aparecer o aviso de (senha ou login errado) -->
                             <span id="div_erro" class="txt_aviso"></span><br>
                         </div>
-                        <button onclick="entrar()" class="btn_entrar">Avançar</button>
+                        <button id="btn_entrar" class="btn_entrar"></button>
                         <br><br>
                         <div class="cadastre">Não tem uma conta? <a href="cadastro.html"><u>Cadastre-se!</u></a></div>
                 </form>
@@ -84,9 +84,6 @@
             } else {
 
                 console.log('Erro de login!');
-
-                id_email.classList.add('error');
-                id_senha.classList.add('error');
 
                 resposta.text().then(texto => {
                     console.error(texto);
